@@ -13,7 +13,7 @@
         <h1>Periodic Table</h1>
         <div class="spans">
             <span>Maen Nashawati</span>
-            <span>Besher Al Tergeman</span>
+            <span>Besher Al Terjuman</span>
             <span>Moayad Wahbeh</span>
         </div>
     </div>
@@ -912,6 +912,8 @@
     <style>
       body{
   background-color: black;
+  text-align: center;
+  width: 100%;
 }
 h1{
   margin: 0 auto;
@@ -943,13 +945,13 @@ span{
   width: fit-content;
   padding-right: 100px;
   padding-left: 100px;
-  min-height: 50px;
+  min-height: 100px;
 }
 .cell {
   z-index: 0;
   margin: 1px;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   transition: 0.3s;
 }
 .cell .element{
@@ -964,19 +966,19 @@ span{
   position: relative;
 }
 .cell .symbol{
-  font-size: 15px;
+  font-size: 30px;
 }
 .cell .at_num{
   position: absolute;
-  top: 2.5px;
-  right: 2.5px;
+  top: 5px;
+  right: 5px;
 
 }
 .cell .at_details{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 5px;
+  bottom: 10px;
   text-align: center;
   font-size: 10px;
 }
@@ -1466,7 +1468,7 @@ span{
 }
 /* open class */
 .cell.open{
-  transform: scaleX(2) scaleY(2);
+  transform: scaleX(3) scaleY(3);
 }
 .cell.open .element{
   opacity: 1 !important;
