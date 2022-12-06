@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="">
+    <!-- <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href=""> -->
     <title>Document</title>
 </head>
 <body>
@@ -909,6 +909,604 @@
         </div>
         <div style="clear: both;"></div>
     </div>
-    <script src="/js/index.js"></script>
+    <style>
+      body{
+  background-color: black;
+}
+h1{
+  margin: 0 auto;
+  width: fit-content;
+  color: yellow;
+}
+.spans{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width:820px) {
+  .spans{
+    flex-direction: row;
+  }
+}
+span{
+  color: red;
+  font-size: 30px;
+}
+.periodic{
+  margin-top:100px;
+  padding-right: 100px;
+}
+.periodic-row{
+  display: flex;
+  width: fit-content;
+  padding-right: 100px;
+  padding-left: 100px;
+  min-height: 50px;
+}
+.cell {
+  z-index: 0;
+  margin: 1px;
+  width: 70px;
+  height: 70px;
+  transition: 0.3s;
+}
+.cell .element{
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+.cell .symbol{
+  font-size: 15px;
+}
+.cell .at_num{
+  position: absolute;
+  top: 2.5px;
+  right: 2.5px;
+
+}
+.cell .at_details{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5px;
+  text-align: center;
+  font-size: 10px;
+}
+/* First row */
+.periodic .periodic-row:nth-child(1) :nth-child(1) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(1) :nth-child(18) .element{
+  background-color: #8cd966;
+  opacity: 0.5;
+}
+/* Second row */
+.periodic .periodic-row:nth-child(2) :nth-child(1) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(2) :nth-child(2) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(2) :nth-child(13) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(2) :nth-child(14) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(2) :nth-child(15) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(2) :nth-child(16) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(2) :nth-child(17) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(2) :nth-child(18) .element{
+  background-color: #8cd966;
+  opacity: 0.5;
+}
+/* Third row */
+.periodic .periodic-row:nth-child(3) :nth-child(1) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(3) :nth-child(2) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(3) :nth-child(13) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(3) :nth-child(14) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(3) :nth-child(15) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(3) :nth-child(16) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(3) :nth-child(17) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(3) :nth-child(18) .element{
+  background-color: #8cd966;
+  opacity: 0.5;
+}
+/* Fourth row */
+.periodic .periodic-row:nth-child(4) :nth-child(1) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(2) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(3) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(4) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(5) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(6) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(7) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(8) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(9) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(10) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(11) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(12) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(13) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(14) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(15) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(16) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(17) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(4) :nth-child(18) .element{
+  background-color: #8cd966;
+  opacity: 0.5;
+}
+/* Fifth row */
+.periodic .periodic-row:nth-child(5) :nth-child(1) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(2) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(3) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(4) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(5) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(6) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(7) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(8) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(9) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(10) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(11) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(12) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(13) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(14) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(15) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(16) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(17) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(5) :nth-child(18) .element{
+  background-color: #8cd966;
+  opacity: 0.5;
+}
+/* sixth row */
+.periodic .periodic-row:nth-child(6) :nth-child(1) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(2) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(4) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(5) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(6) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(7) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(8) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(9) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(10) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(11) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(12) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(13) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(14) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(15) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(16) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(17) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(6) :nth-child(18) .element{
+  background-color: #8cd966;
+  opacity: 0.5;
+}
+/* seventh row */
+.periodic .periodic-row:nth-child(7) :nth-child(1) .element{
+  background-color: #66d98c;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(2) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(4) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(5) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(6) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(7) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(8) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(9) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(10) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(11) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(12) .element{
+  background-color: #66b3b3;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(13) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(14) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(15) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(16) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(17) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(7) :nth-child(18) .element{
+  background-color: #66C6A0;
+  opacity: 0.5;
+}
+/* 8th row */
+.periodic .periodic-row:nth-child(9) :nth-child(4) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(5) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(6) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(7) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(8) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(9) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(10) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(11) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(12) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(13) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(14) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(15) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(16) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(17) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(9) :nth-child(18) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+/* 9th row */
+.periodic .periodic-row:nth-child(10) :nth-child(4) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(5) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(6) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(7) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(8) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(9) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(10) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(11) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(12) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(13) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(14) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(15) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(16) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(17) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.periodic .periodic-row:nth-child(10) :nth-child(18) .element{
+  background-color: #66a0c6;
+  opacity: 0.5;
+}
+.cell .element{
+  opacity: 0.8 !important;
+}
+/* open class */
+.cell.open{
+  transform: scaleX(2) scaleY(2);
+}
+.cell.open .element{
+  opacity: 1 !important;
+}
+/* .cell:hover .at_num{
+  display: block;
+} */
+
+.z-full{
+  z-index: 1000;
+}
+
+
+
+    </style>
+    <script>
+      let cells =document.getElementsByClassName("cell");
+// console.log(cells);
+// ( (ele) => {
+//     ele.onClick=function(){
+//         ele.classList.togle("open");
+//     }
+// });
+for (let i =0 ;i<cells.length; i++){
+    let ele=cells[i];
+    console.log(ele);
+    ele.addEventListener("click",
+        function (){
+            console.log(ele);
+            for (let j =0 ;j<cells.length; j++){
+                let ele1=cells[j];
+                if (ele1 === ele )continue;
+                ele1.classList.remove("open");
+                ele1.classList.remove("z-full");
+            }
+            ele.classList.toggle("open");
+            ele.classList.toggle("z-full");
+        }
+    );
+}
+    </script>
 </body>
 </html>
